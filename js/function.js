@@ -80,6 +80,9 @@ function shipCalculator(){
     else if(group == "G9"){
         duty = 0
     }
+    else{
+        console.log("Duty: ERROR" )
+    }
     
     let percent = (duty*100)+"%"
     percentageVal.innerHTML = "(" + percent + ")" //return percentage
@@ -113,7 +116,7 @@ function shipCalculator(){
       console.log("Total Shipment Cost: " + "B$" + total.toFixed(2))
     }
     else{
-      console.log("ERROR")
+      console.log("Total: ERROR")
     }
   }
   
