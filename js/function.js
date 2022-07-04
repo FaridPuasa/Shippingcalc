@@ -56,34 +56,31 @@ function shipCalculator(){
     if(group == "G1"){
         duty = 1
     }
-    else if(group = "G2"){
+    else if(group == "G2"){
         duty = 0.3
     }
-    else if(group = "G3"){
+    else if(group == "G3"){
         duty = 0.1
     }
-    else if(group = "G4"){
+    else if(group == "G4"){
         duty = 0.15
     }
-    else if(group = "G5"){
+    else if(group == "G5"){
         duty = 0.2
     }
-    else if(group = "G6"){
+    else if(group == "G6"){
         duty = 0.05
     }
-    else if(group = "G7"){
+    else if(group == "G7"){
         duty = 0.03
     }
-    else if(group = "G8"){
+    else if(group == "G8"){
         duty = 0.025
     }
-    else if(group = "G9"){
+    else if(group == "G9"){
         duty = 0
     }
-    else{
-        console.log("No Group Found")
-    }
-    
+    console.log(duty)
     
     let percent = (duty*100)+"%"
     percentageVal.innerHTML = "(" + percent + ")" //return percentage
