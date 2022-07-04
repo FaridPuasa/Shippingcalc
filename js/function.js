@@ -80,7 +80,6 @@ function shipCalculator(){
     else if(group == "G9"){
         duty = 0
     }
-    console.log(duty)
     
     let percent = (duty*100)+"%"
     percentageVal.innerHTML = "(" + percent + ")" //return percentage
