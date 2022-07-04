@@ -94,7 +94,7 @@ function shipCalculator(){
       let handlingCost = prelimCost
       console.log("B$" + handlingCost.toFixed(2))
     }
-    else if (price >= 1 && actualCbm >= 1){
+    else if (price >= 1 && actualCbm > 0){ 
       let priceDuty = price * duty
       let prelimCost = actualCbm * handling
       let handlingCost = prelimCost - priceDuty
