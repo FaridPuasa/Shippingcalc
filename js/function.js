@@ -9,7 +9,7 @@ function shipCalculator(){
     //dom Elements
     let country = document.getElementById("origin").value
     let price = document.getElementById("itemPrice").value //7500
-    let type = document.getElementById("nature").value
+    let group = document.getElementById("taxGroup").value
     let length = document.getElementById("length").value //200
     let width = document.getElementById("width").value //200
     let height = document.getElementById("height").value //200
@@ -52,76 +52,41 @@ function shipCalculator(){
     shippingVal.innerHTML = "B$" + shippingCost.toFixed(2) //return shipping cost
     console.log("Shipping Cost: " + "B$" + shippingCost.toFixed(2))
     
-    if(type == "Electrical"){
-      duty = 0.05
+    console.log("Tax Group: " + group)
+    if(group == "G1"){
+        duty = 1
     }
-    else if(type == "Tyres(New)"){
-      duty = 0.05
+    else if(group = "G2"){
+        duty = 0.3
     }
-    else if(type == "Tyres(Used)"){
-      duty = 0.05
+    else if(group = "G3"){
+        duty = 0.1
     }
-    else if(type == "Home Appliances"){
-      duty = 0.05
+    else if(group = "G4"){
+        duty = 0.15
     }
-    else if(type = "Hair Products"){
-      duty = 0.05
+    else if(group = "G5"){
+        duty = 0.2
     }
-    else if(type == "Textile Products"){
-      duty = 0.05
+    else if(group = "G6"){
+        duty = 0.05
     }
-    else if(type == "Furniture"){
-      duty = 0.05
+    else if(group = "G7"){
+        duty = 0.03
     }
-    else if(type == "Cosmetics Products"){
-      duty = 0.05
+    else if(group = "G8"){
+        duty = 0.025
     }
-    else if(type == "Fireworks"){
-      duty = 0.3
-    }
-    else if(type == "Watches / Wathes Parts / Watches Acessories"){
-      duty = 0.1
-    }
-    else if(type == "Jewelleries / Precious Metals"){
-      duty = 0.15
-    }
-    else if(type == "Consoles / Video Games"){
-      duty = 0.2
-    }
-    else if(type == "Sports Equipments"){
-      duty = 0.1
-    }
-    else if(type == "Vehicle Spare Parts"){
-      duty = 0.05
-    }
-    else if(type == "Industrial Machinaries"){
-      duty = 0.025
-    }
-    else if(type == "Plastic products"){
-      duty = 0.03
-    }
-    else if(type == "Headgear"){
-      duty = 0.1
-    }
-    else if(type == "Mobile Device / Phone / Camera"){
-      duty = 0.1
-    }
-    else if(type == "Rubber Products"){
-      duty = 0.05
-    }
-    else if(type == "Leather Bags / Shoes / Luggage / Jackets"){
-      duty = 1
-    }
-    else if(type == "Sensitive Items"){
-      duty = 1
+    else if(group = "G9"){
+        duty = 0
     }
     else{
-      duty = "Not Eligible"
+        console.log("No Group Found")
     }
+    
     
     let percent = (duty*100)+"%"
     percentageVal.innerHTML = "(" + percent + ")" //return percentage
-    console.log("Commodities: " + type)
     console.log("Tax Duty: " + percent)
     console.log("Item Price: " + price)
     
