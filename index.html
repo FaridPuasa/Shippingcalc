@@ -12,73 +12,91 @@
         <div class = "row">
           <div class = "col-6 my-3">
             <form>
-            <div class="form-group mb-3">
-              <label for="origin">Country of Origin</label>
-              <select class="form-control" id="origin">
-                <option value="China">China</option>
-                <option value="China(Air)">China(Air)</option>
-                <option value="Singapore">Singapore</option>
-                <option value="Malaysia">Malaysia</option>
-                <option value="Others">Others</option>
-              </select>
-            </div>
-            <div class="form-group mb-3">
-              <label for="taxGroup">Commodities</label>
-              <select class="form-control" id="taxGroup">
-                <option value="G1">Sensitive Items</option>
-                <option value="G2">Fireworks</option>
-                <option value="G3">Sports Equipment</option>
-                <option value="G3">Mobile Devices / Camera / Phones</option>
-                <option value="G3">Watches / Watches Parts / Accessories</option>
-                <option value="G3">Headgear</option>
-                <option value="G3">Hairpins</option>
-                <option value="G4">Tyres(Used)</option>
-                <option value="G4">Jewelleries / Precious Metals</option>
-                <option value="G5">Gaming Console / Video Game</option>
-                <option value="G6">Tyres(New)</option>
-                <option value="G6">Vehicle Spare Parts</option>
-                <option value="G6">Hair Products</option>
-                <option value="G6">Leather Bags / Shoes / Luggage / Jacket</option>
-                <option value="G6">Home Appliances</option>
-                <option value="G6">Furniture</option>
-                <option value="G6">Electrical Appliances</option>
-                <option value="G6">Rubber Products</option>
-                <option value="G6">Cosmetic Products</option>
-                <option value="G6">Textile Products</option>
-                <option value="G7">Plastics Products</option>
-                <option value="G8">Industrial Machinary</option>
-                <option value="G6">Building Materials</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="itemPrice">Item Price</label>
-              <input type="text" class="form-control" id="itemPrice" aria-describedby="itemPriceHelp" placeholder="B$">
-            </div>
-            <div class="row my-3">
-              <div class="col-3">
-                <div class="form-group text-center">
-                  <label for="length">Length</label> 
-                  <input type="text" class="form-control" id="length" placeholder="(cm)">
-                </div> 
-              </div>
-              <div class="col-1 text-center">
-                X
-              </div>
-              <div class="col-3">
-                <div class="form-group text-center">
-                  <label for="width">Width</label>
-                  <input type="text" class="form-control" id="width" placeholder="(cm)">
+              <div class="form-group mb-3">
+                <label for="origin">Permit Application</label>
+                <div class="row my-3">
+                  <div class="col-2">
+                    <div class="form-check">
+                      <input type="radio" class="form-check-input" id="radioYes" name="optradio" value="Yes" checked>Yes
+                      <label class="form-check-label" for="radioYes"></label>
+                    </div>
+                  </div>
+                  <div class="col-2">
+                    <div class="form-check">
+                      <input type="radio" class="form-check-input" id="radioNo" name="optradio" value="No">No
+                      <label class="form-check-label" for="radioNo"></label>
+                    </div>
+                  </div>
                 </div>
+                <small>Please select <b>yes</b>, if you request for us to handle the permit application.</small>
               </div>
-              <div class="col-1 text-center">
-                X
+              <div class="form-group mb-3">
+                <label for="origin">Country of Origin</label>
+                <select class="form-control" id="origin">
+                  <option value="China">China</option>
+                  <option value="China(Air)">China(Air)</option>
+                  <option value="Singapore">Singapore</option>
+                  <option value="Malaysia">Malaysia</option>
+                  <option value="Others">Others</option>
+                </select>
               </div>
-              <div class="col-3">
-                <div class="form-group text-center">
-                  <label for="height">Height</label>
-                  <input type="text" class="form-control" id="height" placeholder="(cm)">
+              <div class="form-group mb-3">
+                <label for="taxGroup">Commodities</label>
+                <select class="form-control" id="taxGroup">
+                  <option value="G1">Sensitive Items</option>
+                  <option value="G2">Fireworks</option>
+                  <option value="G3">Sports Equipment</option>
+                  <option value="G3">Mobile Devices / Camera / Phones</option>
+                  <option value="G3">Watches / Watches Parts / Accessories</option>
+                  <option value="G3">Headgear</option>
+                  <option value="G3">Hairpins</option>
+                  <option value="G4">Tyres(Used)</option>
+                  <option value="G4">Jewelleries / Precious Metals</option>
+                  <option value="G5">Gaming Console / Video Game</option>
+                  <option value="G6">Tyres(New)</option>
+                  <option value="G6">Vehicle Spare Parts</option>
+                  <option value="G6">Hair Products</option>
+                  <option value="G6">Leather Bags / Shoes / Luggage / Jacket</option>
+                  <option value="G6">Home Appliances</option>
+                  <option value="G6">Furniture</option>
+                  <option value="G6">Electrical Appliances</option>
+                  <option value="G6">Rubber Products</option>
+                  <option value="G6">Cosmetic Products</option>
+                  <option value="G6">Textile Products</option>
+                  <option value="G7">Plastics Products</option>
+                  <option value="G8">Industrial Machinary</option>
+                  <option value="G6">Building Materials</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="itemPrice">Item Price</label>
+                <input type="text" class="form-control" id="itemPrice" aria-describedby="itemPriceHelp" placeholder="B$">
+              </div>
+              <div class="row my-3">
+                <div class="col-3">
+                  <div class="form-group text-center">
+                    <label for="length">Length</label> 
+                    <input type="text" class="form-control" id="length" placeholder="(cm)">
+                  </div> 
                 </div>
-              </div>
+                <div class="col-1 text-center">
+                  X
+                </div>
+                <div class="col-3">
+                  <div class="form-group text-center">
+                    <label for="width">Width</label>
+                    <input type="text" class="form-control" id="width" placeholder="(cm)">
+                  </div>
+                </div>
+                <div class="col-1 text-center">
+                  X
+                </div>
+                <div class="col-3">
+                  <div class="form-group text-center">
+                    <label for="height">Height</label>
+                    <input type="text" class="form-control" id="height" placeholder="(cm)">
+                  </div>
+                </div>
               </div>
             </form>
             <button class="btn btn-success" onclick="shipCalculator()">Calculate</button>
@@ -88,6 +106,7 @@
             <h3 class="text-center mb-3">Shipment Cost Estimation</h3>
             <h5>Item Price:&nbsp;<span class="text-secondary" id="priceValue"></span></h5>
             <h5>Tax Duty:&nbsp;<span class="text-primary"id="dutyValue"></span><span id="percentage"></span></h5>
+            <h5>Admin Fee:&nbsp;<span class="text-primary" id="adminValue"></span></h5>
             <h5>Handling Cost:&nbsp;<span class="text-primary" id="handlingValue"></span></h5>
             <h5>Shipping Cost:&nbsp;<span class="text-info" id="shippingValue"></span></h5>
             <h5>Volume:&nbsp;<span class="text-danger" id="volumeValue"></span></h5>

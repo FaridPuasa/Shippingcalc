@@ -4,10 +4,12 @@ function shipCalculator(){
     let division = 100 * 100 * 100
     let duty
     let shipping
+    let permit
     //let shippingCost = actualCbm * 230
     //console.log("B$" + shippingCost.toFixed(2))
     //dom Elements
     let country = document.getElementById("origin").value
+    let permitApplication = document.getElementsByName('optradio')
     let price = document.getElementById("itemPrice").value //7500
     let group = document.getElementById("taxGroup").value
     let length = document.getElementById("length").value //200
@@ -16,6 +18,7 @@ function shipCalculator(){
     
     //dom elements return value
     let priceVal = document.getElementById("priceValue")
+    let adminVal = document.getElementById("adminValue")
     let dutyVal = document.getElementById("dutyValue")
     let percentageVal = document.getElementById("percentage")
     let handlingVal = document.getElementById("handlingValue")
@@ -29,6 +32,25 @@ function shipCalculator(){
     let actualCbm = cbm/division
     volumeVal.innerHTML = actualCbm + "M<sup>3</sup>"
     console.log("Size: " + actualCbm + " CBM")
+
+    for (let i = 0; i < permitApplication.length; i++) {
+      if (permitApplication[i].checked) {
+        console.log(permitApplication[i].value);
+        if(permitApplication[i].value == "Yes"){
+          permit = 10
+        }
+        else if(permitApplication[i].value == "No"){
+          permit = 0
+        }
+        else{
+          console.log("Permit Application: Error")
+        }
+        break;
+      }
+    }
+
+    adminVal.innerHTML = "B$" + permit
+    console.log("Permit Application: " + permit)
     
     if(country == "China"){
       shipping = 230
@@ -111,7 +133,7 @@ function shipCalculator(){
       console.log("Tax Duty: " + "B$" + priceDuty.toFixed(2))
       console.log("Handling Cost: " + "B$" + handlingCost.toFixed(2))
       
-      let total = handlingCost + priceDuty + shippingCost
+      let total = handlingCost + priceDuty + shippingCost + permit
       totalVal.innerHTML = "B$" + total.toFixed(2)
       console.log("Total Shipment Cost: " + "B$" + total.toFixed(2))
     }
