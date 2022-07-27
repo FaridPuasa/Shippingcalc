@@ -9,7 +9,7 @@ function shipCalculator(){
     //console.log("B$" + shippingCost.toFixed(2))
     //dom Elements
     let country = document.getElementById("origin").value
-    let discount = document.getElementById("discount").value
+    //let discount = document.getElementById("discount").value
     let permitApplication = document.getElementsByName('optradio')
     let price = document.getElementById("itemPrice").value //7500
     let group = document.getElementById("taxGroup").value
