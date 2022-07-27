@@ -53,7 +53,7 @@ function shipCalculator(){
     console.log("Permit Application: " + permit)
     
     if(country == "China"){
-      shipping = 230
+      shipping = 200
     }
     else if(country == "China(Air)"){
       shipping = 23
