@@ -9,6 +9,7 @@ function shipCalculator(){
     //console.log("B$" + shippingCost.toFixed(2))
     //dom Elements
     let country = document.getElementById("origin").value
+    let discount = document.getElementById("discount").value
     let permitApplication = document.getElementsByName('optradio')
     let price = document.getElementById("itemPrice").value //7500
     let group = document.getElementById("taxGroup").value
@@ -63,6 +64,15 @@ function shipCalculator(){
     }
     else if(country == "Singapore"){
       shipping = 180
+    }
+    else if(country == "China(50)"){
+      shipping = 200 * 0.5
+    }
+    else if(country == "Singapore(50)"){
+      shipping = 180 * 0.5
+    }
+    else if(country == "Malaysia(50)"){
+      shipping = 180 * 0.5
     }
     else{
       shipping = 0
